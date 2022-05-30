@@ -1,0 +1,20 @@
+1. mlflow, version 1.26.1
+2.
+python preprocess_data.py --raw_data_path C:\\Users\\Satya\\Desktop\\Projects\\MLOps\\Data --dest_path C:\\Users\\Satya\\Desktop\\Projects\\MLOps\\MLOps_Zoomcamp\\02_Model_Tracking\\output
+
+4 files were saved
+
+3. 17 parameters
+python train.py --data_path C:\\Users\\Satya\\Desktop\\Projects\\MLOps\\MLOps_Zoomcamp\\02_Model_Tracking\\output
+
+4.
+mlflow ui --backend-store-uri sqlite:///mlflow.db --serve-artifacts
+
+python hpo.py --data_path C:\\Users\\Satya\\Desktop\\Projects\\MLOps\\MLOps_Zoomcamp\\02_Model_Tracking\\output --max_evals 50
+
+5. 6.628 (step=0) RMSE
+
+6. test RMSE of best model - 6.548
+
+python register_model.py --data_path C:\\Users\\Satya\\Desktop\\Projects\\MLOps\\MLOps_Zoomcamp\\02_Model_Tracking\\output 
+
