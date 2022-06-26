@@ -1,0 +1,13 @@
+1. 16.191691679979066
+2. 19M
+3. jupyter nbconvert starter.ipynb --to script
+4.
+sha256:08ef968f6b72033c16c479c966bf37ccd49b06ea91b765e1cc27afefe723920b
+5. The mean predicted duration is 16.298821614015107
+
+
+pipenv install scikit-learn==1.0.2 flask --python=3.9
+pipenv shell
+
+python starter.py 2021 3
+
