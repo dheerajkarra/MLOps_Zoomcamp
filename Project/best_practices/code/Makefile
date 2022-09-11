@@ -6,7 +6,7 @@ LOCAL_TAG:=2022-09-10-23-25
 LOCAL_IMAGE_NAME:=batch-model-energy-usage:${LOCAL_TAG}
 
 test:
-	pytest tests/ 
+	pytest tests/
 
 integration_test: test
 	LOCAL_IMAGE_NAME=${LOCAL_IMAGE_NAME} bash integration-test/run.sh
@@ -16,7 +16,7 @@ quality_checks: integration_test
 	black .
 	pylint --recursive=y .
 
-build: quality_checks 
+build: quality_checks
 	docker build -t ${LOCAL_IMAGE_NAME} .
 
 #integration_test: build

@@ -50,7 +50,7 @@ def main():
 
     select_features = ['Visibility', 'RH_5', 'Windspeed', 'RH_out']
 
-    df = read_data(input_file)   
+    df = read_data(input_file)
 
     dicts = df[select_features].to_dict(orient='records')
     X_val = dv.transform(dicts)
